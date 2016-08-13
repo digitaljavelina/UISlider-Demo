@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISlider_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NFi-1b-I4x">
+                                <rect key="frame" x="18" y="28" width="564" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KqA-b2-yzX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="6WV-pd-44H"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olK-hI-Vwc">
+                                <rect key="frame" x="20" y="137" width="560" height="159"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-Ba-RMq">
+                                <rect key="frame" x="18" y="66" width="564" height="31"/>
+                                <connections>
+                                    <action selector="changeFontColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dcv-ni-YHA"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q6h-Ba-RMq" firstAttribute="trailing" secondItem="NFi-1b-I4x" secondAttribute="trailing" id="1tc-yC-ipD"/>
+                            <constraint firstItem="Q6h-Ba-RMq" firstAttribute="top" secondItem="NFi-1b-I4x" secondAttribute="bottom" constant="8" symbolic="YES" id="6Yq-b1-VRM"/>
+                            <constraint firstItem="olK-hI-Vwc" firstAttribute="leading" secondItem="NFi-1b-I4x" secondAttribute="leading" id="7v3-Yh-AGp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="olK-hI-Vwc" secondAttribute="bottom" constant="304" id="8TW-KX-oqI"/>
+                            <constraint firstItem="olK-hI-Vwc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HEJ-9h-OWG"/>
+                            <constraint firstItem="olK-hI-Vwc" firstAttribute="trailing" secondItem="NFi-1b-I4x" secondAttribute="trailing" id="IOk-IN-jS0"/>
+                            <constraint firstItem="olK-hI-Vwc" firstAttribute="top" secondItem="NFi-1b-I4x" secondAttribute="bottom" constant="79" id="NEz-Xb-aF8"/>
+                            <constraint firstItem="NFi-1b-I4x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RdG-fp-5i4"/>
+                            <constraint firstItem="Q6h-Ba-RMq" firstAttribute="leading" secondItem="NFi-1b-I4x" secondAttribute="leading" id="adX-sH-yIi"/>
+                            <constraint firstItem="olK-hI-Vwc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ieK-Si-dLD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorSlider" destination="Q6h-Ba-RMq" id="FF2-WA-bQ5"/>
+                        <outlet property="label" destination="olK-hI-Vwc" id="OJN-gC-eoE"/>
+                        <outlet property="slider" destination="NFi-1b-I4x" id="N7d-c2-PGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="370"/>
+        </scene>
+    </scenes>
+</document>
